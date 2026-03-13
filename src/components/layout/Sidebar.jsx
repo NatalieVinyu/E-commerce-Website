@@ -9,11 +9,11 @@ import { IoLogOut } from "react-icons/io5";
 
 function Sidebar() {
   const linkStyle = ({ isActive }) =>
-    isActive ? "bg-gray-700 text-black font-semibold" : "text-gray-600 hover:bg-gray-100";
+    isActive ? "text-gray-700 font-semibold" : "text-gray-600 hover:bg-gray-100";
 
   return (
     <div>
-      <aside className='h-sreen w-64 bg-blue-700 border-r flex flex-col'>
+      <aside className='w-24 bg-white rounded-xl flex flex-col text-center'>
        <div>
         
         {/* LOGO */}
@@ -27,30 +27,30 @@ function Sidebar() {
         <nav className='flex flex-col gap-2 px-4'>
           <NavLink 
             to="/"
-            className={({ isActive }) => `px-4 py-2 rounded ${linkStyle({ isActive })}`
+            className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
             }>
-            <RxHamburgerMenu /> 
+            <RxHamburgerMenu className='h-6 w-6'/> 
           </NavLink>
 
           <NavLink 
             to="/"
-            className={({ isActive }) => `px-4 py-2 rounded ${linkStyle({ isActive })}`
+            className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
             }>
-            <BsShop /> 
+            <BsShop className='h-6 w-6'/> 
           </NavLink>
 
           <NavLink 
             to="/"
-            className={({ isActive }) => `px-4 py-2 rounded ${linkStyle({ isActive })}`
+            className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
             }>
-            <RiShoppingBag4Fill /> 
+            <RiShoppingBag4Fill className='h-6 w-6'/> 
           </NavLink>
 
           <NavLink 
             to="/"
-            className={({ isActive }) => `px-4 py-2 rounded ${linkStyle({ isActive })}`
+            className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
             }>
-            <IoLogOut /> 
+            <IoLogOut className='h-6 w-6'/> 
           </NavLink>
         </nav>
        </div>
