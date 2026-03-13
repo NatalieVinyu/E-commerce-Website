@@ -5,10 +5,12 @@ import Sidebar from '../components/layout/Sidebar'
 
 function Home() {
   return (
-    <div>
+    <div className='flex'>
       <Sidebar />
-      <Navbar />
-      <h1>Homepage</h1>
+
+      <main className='flex-1 p-8'>
+        <Navbar />
+      </main>
     </div>
   )
 }
