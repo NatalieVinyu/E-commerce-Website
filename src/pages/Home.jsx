@@ -13,7 +13,7 @@ function Home() {
 
       <main className='flex-1 p-8'>
         <Navbar />
-        <ProductList />
+        <ProductList/>
 
       </main>
     </div>

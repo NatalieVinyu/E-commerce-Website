@@ -4,8 +4,8 @@ import ProductCard from './ProductCard'
 
 function ProductList() {
   return (
-    <div>
-      <div>
+    <div className='pt-12'>
+      <div className='flex flex-wrap gap-6'>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
