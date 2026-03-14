@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/layout/Navbar'
 import Sidebar from '../components/layout/Sidebar'
+import ProductList from '../components/product/ProductList'
 
 
 function Home() {
@@ -12,6 +13,8 @@ function Home() {
 
       <main className='flex-1 p-8'>
         <Navbar />
+        <ProductList />
+
       </main>
     </div>
   )
