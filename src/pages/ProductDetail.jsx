@@ -1,12 +1,7 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import products from '../../data/products'
 import { BsBagPlusFill } from "react-icons/bs";
 
-function ProductDetail() {
-  const { id } = useParams();
-
-  const product = products.find((p) => p.id === id);
+function ProductDetail({ product, onBack }) {
 
   if (!product) {
     return <p>Product not found</p>
@@ -14,6 +9,9 @@ function ProductDetail() {
 
   return (
     <div>
+      <div onClick={onBack}>
+        back
+      </div>
       <div>
         <img src={product.image} alt={product.name} className='object-contain h-80' />
 
@@ -23,11 +21,17 @@ function ProductDetail() {
           <h4>{product.price}</h4>
           <p>{product.shortDescription}</p>
         </div>
+
       </div>
 
       <button>
         <BsBagPlusFill /> Add to bag
       </button>
+
+      <hr />
+      <div>
+        <p>{product.description}</p>
+      </div>
     </div>
   )
 }

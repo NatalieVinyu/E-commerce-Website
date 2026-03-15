@@ -1,6 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductDetail from './components/product/ProductDetail'
+import { Routes, Route } from 'react-router-dom'
+import ProductDetail from './pages/ProductDetail'
 import Home from './pages/Home'
 
 function App() {
