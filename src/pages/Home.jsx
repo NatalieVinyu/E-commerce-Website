@@ -10,10 +10,8 @@ function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className='h-screen flex'>
-      <div className='pl-4 py-4'>
+    <div className='h-screen flex bg-gray-200'>
         <Sidebar />
-      </div>
 
       <main className='flex-1 p-8'>
         <Navbar />

@@ -1,5 +1,6 @@
 import React from 'react'
 import { BsBagPlusFill } from "react-icons/bs";
+import { IoIosArrowBack } from "react-icons/io";
 
 function ProductDetail({ product, onBack }) {
 
@@ -9,8 +10,8 @@ function ProductDetail({ product, onBack }) {
 
   return (
     <div>
-      <div onClick={onBack}>
-        back
+      <div onClick={onBack} className='flex items-center gap-4 cursor-pointer'>
+        <IoIosArrowBack /> back
       </div>
       <div>
         <img src={product.image} alt={product.name} className='object-contain h-80' />

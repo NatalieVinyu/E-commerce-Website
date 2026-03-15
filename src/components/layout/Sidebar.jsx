@@ -13,7 +13,7 @@ function Sidebar() {
 
   return (
     <div>
-      <aside className='w-24 bg-white rounded-xl flex flex-col text-center'>
+      <aside className='w-24 h-screen bg-white rounded-xl flex flex-col items-center text-center'>
        <div>
         
         {/* LOGO */}
@@ -24,7 +24,7 @@ function Sidebar() {
         </div>
 
         {/* NAVIGATION */}
-        <nav className='flex flex-col gap-2 px-4'>
+        <nav className='flex flex-col gap-2 mt-6'>
           <NavLink 
             to="/"
             className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
@@ -33,7 +33,7 @@ function Sidebar() {
           </NavLink>
 
           <NavLink 
-            to="/"
+            to='/products'
             className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
             }>
             <BsShop className='h-6 w-6'/> 
@@ -46,12 +46,16 @@ function Sidebar() {
             <RiShoppingBag4Fill className='h-6 w-6'/> 
           </NavLink>
 
-          <NavLink 
-            to="/"
-            className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`
-            }>
-            <IoLogOut className='h-6 w-6'/> 
-          </NavLink>
+
+          <div className='mt-auto mb-6'>
+            <NavLink 
+              to="/"
+              className={linkStyle}
+              >
+              <IoLogOut className='h-6 w-6'/> 
+            </NavLink>
+          </div>
+          
         </nav>
        </div>
       </aside>
