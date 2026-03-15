@@ -1,11 +1,17 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ProductDetail from './components/product/ProductDetail'
 import Home from './pages/Home'
 
 function App() {
   return (
-    <div className='bg-gray-200'>
-      <Home />
-    </div>
+      <Routes>
+
+        <Route path='/' element={<Home />} />
+        <Route path='/product/:id' element={<ProductDetail />} />
+
+      </Routes>
+    
   )
 }
 
