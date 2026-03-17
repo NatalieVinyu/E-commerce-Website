@@ -10,7 +10,7 @@ function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className='h-screen flex bg-gray-200'>
+    <div className='flex bg-gray-200'>
         <Sidebar />
 
       <main className='flex-1 p-8'>
