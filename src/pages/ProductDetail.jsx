@@ -25,9 +25,12 @@ function ProductDetail({ product, onBack }) {
             <p>{product.shortDescription}</p>
           </div>
 
-          <button className='flex rounded bg-black text-white p-2 items-center gap-2'>
-            <BsBagPlusFill /> Add to bag
-          </button>
+          <div className='flex justify-end mt-4'>
+            <button className='flex bg-black text-white rounded-lg p-2 items-center gap-2'>
+              <BsBagPlusFill /> Add to bag
+            </button>
+          </div>
+          
         </div>
 
       </div>
@@ -36,7 +39,7 @@ function ProductDetail({ product, onBack }) {
 
       <div className=''>
         <h1 className='text-4xl mb-4'>Description</h1>
-        <p>{product.description}</p>
+        <p className='text-gray-600'>{product.description}</p>
       </div>
     </div>
   )
