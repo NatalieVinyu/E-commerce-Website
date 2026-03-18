@@ -17,18 +17,24 @@ function Home() {
         <Sidebar />
 
       {/* MAIN CONTENT */}
-      <main className='flex-1 p-8'>
-        <Navbar />
+      <main className='flex flex-1 p-8'>
+        <div className='flex-1'>
+          <Navbar />
 
-        {/* IF NO PRODUCT IS SELECTED -> SHOWS PRODUCTLIST.JSX
-            IF A PRODUCT IS SELECTED -> SHOWS PRODUCTDETAILS.JSX */}
-        {!selectedProduct ? (
+          {/* IF NO PRODUCT IS SELECTED -> SHOWS PRODUCTLIST.JSX
+              IF A PRODUCT IS SELECTED -> SHOWS PRODUCTDETAILS.JSX */}
+          {!selectedProduct ? (
           <ProductList onSelectProduct={setSelectedProduct} />
-        ) : (
+          ) : (
           <ProductDetail product={selectedProduct} onBack={() => setSelectedProduct(null)} />
-        )}
+           )}
+        </div>
+        
+
+        <div className='w-1 bg-gray-300 self-stretch mx-2'></div>
 
       </main>
+
     </div>
   )
 }
