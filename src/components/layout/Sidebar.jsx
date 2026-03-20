@@ -19,7 +19,7 @@ function Sidebar() {
         <RxHamburgerMenu className='w-6 h-6 cursor-pointer' onClick={() => setIsCollapsed(!isCollapsed)}/>
       </div>
 
-    <aside className={`bg-white min-h-screen md:relative z-50 rounded-xl flex flex-col py-4 transition-transform duration-300 ${isCollapsed ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 `}>
+    <aside className={`bg-white min-h-screen md:relative z-50 rounded-xl flex flex-col py-4 p-2 md:ml-2 transition-transform duration-300 ${isCollapsed ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 `}>
       
       {/* LOGO */}
       <NavLink to="/" className='hidden mb-8 sm:flex items-center justify-center'>
@@ -38,14 +38,14 @@ function Sidebar() {
           to="/products"
           className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`}
         >
-          <BsShop className='h-6 w-6'/> 
+          <BsShop className='h-5 w-5'/> 
         </NavLink>
 
         <NavLink 
           to="/cart"
           className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`}
         >
-          <RiShoppingBag4Fill className='h-6 w-6'/> 
+          <RiShoppingBag4Fill className='h-5 w-5'/> 
         </NavLink>
 
         {/* LOGOUT */}

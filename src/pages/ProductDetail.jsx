@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsBagPlusFill } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
+import { IoStar, IoStarHalf } from "react-icons/io5";
 
 function ProductDetail({ product, onBack }) {
 
@@ -10,7 +11,7 @@ function ProductDetail({ product, onBack }) {
   }
 
   return (
-    <div>
+    <div className='h-screen'>
 
       {/* BACK BUTTON RETURNS TO PRODUCTLIST.JSX */}
       <div onClick={onBack} className='flex items-center gap-4 cursor-pointer'>
@@ -24,8 +25,18 @@ function ProductDetail({ product, onBack }) {
         <div>
           <div>
             <h1 className='text-5xl'>{product.name}</h1>
-            <h3 className='text-2xl'>{product.model}</h3>
-            <h4 className='text-2xl'>{product.price}</h4>
+            <h3 className='text-2xl text-gray-400'>{product.model}</h3>
+
+            {/* STAR RATINGS */}
+            <div className='flex gap-2 py-2'>
+              <IoStar className='text-green-600' />
+              <IoStar className='text-green-600' />
+              <IoStar className='text-green-600' />
+              <IoStar className='text-green-600' />
+              <IoStarHalf className='text-green-600' />
+            </div>
+
+            <h4 className='text-2xl'>$ {product.price}</h4>
             <p>{product.shortDescription}</p>
           </div>
 

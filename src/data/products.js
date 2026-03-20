@@ -1,12 +1,8 @@
 import watch from '../assets/Watch.png'
 import headphones from '../assets/Headphones.png'
 import iphone01 from '../assets/Iphone-12-01.png'
-import iphone02 from '../assets/Iphone-12-02.png'
-import iphone03 from '../assets/Iphone-12-03.png'
-import iphone04 from '../assets/Iphone-12-04.png'
-import iphone05 from '../assets/Iphone-12-Pro-01.png'
-import iphone06 from '../assets/Iphone-12-Pro-02.png'
-import iphone07 from '../assets/Iphone-13-Pro-03.png'
+import iphone02 from '../assets/Iphone-12-Pro-02.png'
+import iphone03 from '../assets/Iphone-13-Pro-03.png'
 import Macbook from '../assets/Macbook.png'
 import SamsungNote21 from '../assets/Samsung-Note21.png'
 import SamsungS21 from '../assets/Samsung-S21.png'
@@ -18,12 +14,12 @@ import DellXPS13 from '../assets/Dell-XPS-13-Black.png'
 const products = [
   {
     id: 'p1',
-    name: 'Apple Watch',
-    model: 'Series 5 SE',
-    price: 529.99,
+    name: 'Apple Watch SE',
+    model: '2nd Generation',
+    price: 279.99,
     category: 'Wearable Technology',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus.',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus. Nam blandit ut libero quis molestie. Morbi id eleifend elit. Nunc velit turpis, fermentum sit amet ornare faucibus, fermentum id lacus. Aenean posuere ornare lacinia. Nunc ligula lectus, consectetur a metus nec, dapibus imperdiet risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nunc ipsum lacus, condimentum vitae tristique consectetur, sodales volutpat justo. In sed urna eu ex vulputate dictum ut in orci. Nulla faucibus at justo nec rhoncus. Nam tempus justo eros, molestie posuere odio rutrum vel. Aliquam eleifend dictum eros, sed placerat nisl placerat at. Vestibulum a venenatis tellus. Nam non velit vel felis mattis accumsan sit amet eget tortor. Praesent aliquam quam ligula, a imperdiet velit scelerisque ac. Etiam vel diam at nunc luctus faucibus ut id sapien. Cras pretium mi tellus, ut malesuada urna sollicitudin quis. Proin rutrum vel ligula vel porttitor. Integer vulputate ac odio vel condimentum. Duis enim tellus, porta eu augue tincidunt, efficitur facilisis magna. Mauris interdum risus in urna fermentum ullamcorper. In hac habitasse platea dictumst. In sagittis ac lacus non vulputate. Etiam vitae malesuada urna. Aliquam erat volutpat.',
+    shortDescription: 'Affordable smartwatch with essential fitness and health tracking features.',
+    description: 'The Apple Watch SE (2nd Generation) offers powerful performance with essential health and fitness features. It includes activity tracking, heart rate monitoring, and seamless integration with the Apple ecosystem, making it ideal for everyday use.',
     image: watch
   },
   {
@@ -32,49 +28,49 @@ const products = [
     model: 'Light Grey',
     price: 39.99,
     category: 'Audio',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus.',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus. Nam blandit ut libero quis molestie. Morbi id eleifend elit. Nunc velit turpis, fermentum sit amet ornare faucibus, fermentum id lacus. Aenean posuere ornare lacinia. Nunc ligula lectus, consectetur a metus nec, dapibus imperdiet risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nunc ipsum lacus, condimentum vitae tristique consectetur, sodales volutpat justo. In sed urna eu ex vulputate dictum ut in orci. Nulla faucibus at justo nec rhoncus. Nam tempus justo eros, molestie posuere odio rutrum vel. Aliquam eleifend dictum eros, sed placerat nisl placerat at. Vestibulum a venenatis tellus. Nam non velit vel felis mattis accumsan sit amet eget tortor. Praesent aliquam quam ligula, a imperdiet velit scelerisque ac. Etiam vel diam at nunc luctus faucibus ut id sapien. Cras pretium mi tellus, ut malesuada urna sollicitudin quis. Proin rutrum vel ligula vel porttitor. Integer vulputate ac odio vel condimentum. Duis enim tellus, porta eu augue tincidunt, efficitur facilisis magna. Mauris interdum risus in urna fermentum ullamcorper. In hac habitasse platea dictumst. In sagittis ac lacus non vulputate. Etiam vitae malesuada urna. Aliquam erat volutpat.',
+    shortDescription: 'Wireless on-ear headphones with long battery life and lightweight design.',
+    description: 'The Sony WH-CH510 wireless headphones offer a comfortable on-ear design with up to 35 hours of battery life. They feature Bluetooth connectivity, quick charging, and a lightweight build, making them ideal for everyday listening and travel.',
     image: headphones
   },
   {
     id: 'p3',
-    name: 'Iphone 11',
-    model: 'Serious Black',
+    name: 'iPhone 11',
+    model: 'Black',
     price: 619.99,
-    category: 'Electronic Devices',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus.',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus. Nam blandit ut libero quis molestie. Morbi id eleifend elit. Nunc velit turpis, fermentum sit amet ornare faucibus, fermentum id lacus. Aenean posuere ornare lacinia. Nunc ligula lectus, consectetur a metus nec, dapibus imperdiet risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nunc ipsum lacus, condimentum vitae tristique consectetur, sodales volutpat justo. In sed urna eu ex vulputate dictum ut in orci. Nulla faucibus at justo nec rhoncus. Nam tempus justo eros, molestie posuere odio rutrum vel. Aliquam eleifend dictum eros, sed placerat nisl placerat at. Vestibulum a venenatis tellus. Nam non velit vel felis mattis accumsan sit amet eget tortor. Praesent aliquam quam ligula, a imperdiet velit scelerisque ac. Etiam vel diam at nunc luctus faucibus ut id sapien. Cras pretium mi tellus, ut malesuada urna sollicitudin quis. Proin rutrum vel ligula vel porttitor. Integer vulputate ac odio vel condimentum. Duis enim tellus, porta eu augue tincidunt, efficitur facilisis magna. Mauris interdum risus in urna fermentum ullamcorper. In hac habitasse platea dictumst. In sagittis ac lacus non vulputate. Etiam vitae malesuada urna. Aliquam erat volutpat.',
+    category: 'Smartphones',
+    shortDescription: 'Reliable smartphone with dual-camera system and strong performance.',
+    description: 'The iPhone 11 features a powerful A13 Bionic chip, a dual-camera system for high-quality photos and videos, and a durable design. It offers smooth performance for everyday tasks and remains a popular choice for users seeking value and reliability.',
     image: iphone01
   },
   {
     id: 'p4',
-    name: 'Iphone 11',
-    model: 'Subway Blue',
-    price: 619.99,
-    category: 'Electronic Devices',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus.',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus. Nam blandit ut libero quis molestie. Morbi id eleifend elit. Nunc velit turpis, fermentum sit amet ornare faucibus, fermentum id lacus. Aenean posuere ornare lacinia. Nunc ligula lectus, consectetur a metus nec, dapibus imperdiet risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nunc ipsum lacus, condimentum vitae tristique consectetur, sodales volutpat justo. In sed urna eu ex vulputate dictum ut in orci. Nulla faucibus at justo nec rhoncus. Nam tempus justo eros, molestie posuere odio rutrum vel. Aliquam eleifend dictum eros, sed placerat nisl placerat at. Vestibulum a venenatis tellus. Nam non velit vel felis mattis accumsan sit amet eget tortor. Praesent aliquam quam ligula, a imperdiet velit scelerisque ac. Etiam vel diam at nunc luctus faucibus ut id sapien. Cras pretium mi tellus, ut malesuada urna sollicitudin quis. Proin rutrum vel ligula vel porttitor. Integer vulputate ac odio vel condimentum. Duis enim tellus, porta eu augue tincidunt, efficitur facilisis magna. Mauris interdum risus in urna fermentum ullamcorper. In hac habitasse platea dictumst. In sagittis ac lacus non vulputate. Etiam vitae malesuada urna. Aliquam erat volutpat.',
+    name: 'iPhone 12 Pro',
+    model: 'Pacific Blue',
+    price: 999.99,
+    category: 'Smartphones',
+    shortDescription: 'Premium smartphone with A14 Bionic chip and advanced triple-camera system.',
+    description: 'The iPhone 12 Pro features a powerful A14 Bionic chip, a Super Retina XDR display, and a professional-grade triple-camera system with LiDAR for enhanced photography and AR experiences. The Pacific Blue finish adds a sleek and modern look to its premium design.',
     image: iphone02
   },
   {
     id: 'p5',
-    name: 'Iphone 11',
-    model: 'Product Red',
-    price: 619.99,
-    category: 'Electronic Devices',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus.',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus. Nam blandit ut libero quis molestie. Morbi id eleifend elit. Nunc velit turpis, fermentum sit amet ornare faucibus, fermentum id lacus. Aenean posuere ornare lacinia. Nunc ligula lectus, consectetur a metus nec, dapibus imperdiet risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nunc ipsum lacus, condimentum vitae tristique consectetur, sodales volutpat justo. In sed urna eu ex vulputate dictum ut in orci. Nulla faucibus at justo nec rhoncus. Nam tempus justo eros, molestie posuere odio rutrum vel. Aliquam eleifend dictum eros, sed placerat nisl placerat at. Vestibulum a venenatis tellus. Nam non velit vel felis mattis accumsan sit amet eget tortor. Praesent aliquam quam ligula, a imperdiet velit scelerisque ac. Etiam vel diam at nunc luctus faucibus ut id sapien. Cras pretium mi tellus, ut malesuada urna sollicitudin quis. Proin rutrum vel ligula vel porttitor. Integer vulputate ac odio vel condimentum. Duis enim tellus, porta eu augue tincidunt, efficitur facilisis magna. Mauris interdum risus in urna fermentum ullamcorper. In hac habitasse platea dictumst. In sagittis ac lacus non vulputate. Etiam vitae malesuada urna. Aliquam erat volutpat.',
+    name: 'iPhone 13 Pro',
+    model: 'Silver',
+    price: 1099.99,
+    category: 'Smartphones',
+    shortDescription: 'High-performance smartphone with ProMotion display and advanced camera system.',
+    description: 'The iPhone 13 Pro features Apple’s A15 Bionic chip, a Super Retina XDR display with ProMotion, and a powerful triple-camera system for professional-quality photos and videos. The Silver finish offers a clean and premium look.',
     image: iphone03
   },
   {
     id: 'p6',
-    name: 'Iphone 11',
-    model: 'Milky White',
-    price: 619.99,
-    category: 'Electronic Devices',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus.',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas risus ac lacus dapibus, vel laoreet ipsum faucibus. Nam blandit ut libero quis molestie. Morbi id eleifend elit. Nunc velit turpis, fermentum sit amet ornare faucibus, fermentum id lacus. Aenean posuere ornare lacinia. Nunc ligula lectus, consectetur a metus nec, dapibus imperdiet risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nunc ipsum lacus, condimentum vitae tristique consectetur, sodales volutpat justo. In sed urna eu ex vulputate dictum ut in orci. Nulla faucibus at justo nec rhoncus. Nam tempus justo eros, molestie posuere odio rutrum vel. Aliquam eleifend dictum eros, sed placerat nisl placerat at. Vestibulum a venenatis tellus. Nam non velit vel felis mattis accumsan sit amet eget tortor. Praesent aliquam quam ligula, a imperdiet velit scelerisque ac. Etiam vel diam at nunc luctus faucibus ut id sapien. Cras pretium mi tellus, ut malesuada urna sollicitudin quis. Proin rutrum vel ligula vel porttitor. Integer vulputate ac odio vel condimentum. Duis enim tellus, porta eu augue tincidunt, efficitur facilisis magna. Mauris interdum risus in urna fermentum ullamcorper. In hac habitasse platea dictumst. In sagittis ac lacus non vulputate. Etiam vitae malesuada urna. Aliquam erat volutpat.',
-    image: iphone04
+    name: 'Samsung Galaxy S21',
+    model: 'Phantom Violet',
+    price: 799.99,
+    category: 'Smartphones',
+    shortDescription: 'Flagship smartphone with powerful performance and advanced camera system.',
+    description: 'The Samsung Galaxy S21 features a high-performance processor, a dynamic AMOLED display, and a versatile triple-camera system for capturing high-quality photos and videos. Its sleek design and smooth performance make it ideal for everyday use and entertainment.',
+    image: SamsungS21
   },
   {
     id: 'p7',
@@ -88,13 +84,13 @@ const products = [
   },
   {
     id: 'p8',
-    name: 'iPhone 12 Pro',
-    model: 'Pink',
-    price: 619.99,
-    category: 'Electronic Devices',
-    shortDescription: 'Powerful smartphone with A14 Bionic chip and Pro camera system.',
-    description: 'The iPhone 12 Pro features Apple’s A14 Bionic chip, a stunning Super Retina XDR display, and a triple-camera system with LiDAR for advanced photography and AR experiences. Built with a premium stainless steel frame and Ceramic Shield front, it delivers both durability and high-end performance.',
-    image: iphone05
+    name: 'Samsung Galaxy S21 Ultra',
+    model: 'Phantom Black',
+    price: 1199.99,
+    category: 'Smartphones',
+    shortDescription: 'Premium flagship smartphone with advanced camera and high-end performance.',
+    description: 'The Samsung Galaxy S21 Ultra features a powerful processor, a large Dynamic AMOLED display, and a professional-grade camera system with high zoom capabilities. It is designed for users who want top-tier performance, photography, and productivity.',
+    image: SamsungS21Pro
   },
   {
     id: 'p9',
