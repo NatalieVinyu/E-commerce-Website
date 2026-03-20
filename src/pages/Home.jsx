@@ -17,7 +17,7 @@ function Home() {
         <Sidebar />
 
       {/* MAIN CONTENT */}
-      <main className='flex flex-1 p-8'>
+      <main className='flex flex-1 p-4 pl-32'>
         <div className='flex-1'>
           <Navbar />
 
@@ -31,7 +31,7 @@ function Home() {
         </div>
         
 
-        <div className='w-1 bg-gray-300 self-stretch mx-2'></div>
+        <div className='hidden md:block w-1 bg-gray-300 self-stretch mx-2'></div>
 
       </main>
 
