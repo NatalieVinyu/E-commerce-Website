@@ -5,6 +5,7 @@ import Sidebar from '../components/layout/Sidebar'
 import ProductList from '../components/product/ProductList'
 import ProductDetail from '../pages/ProductDetail'
 import productsData from '../data/products'
+import CartSummary from '../components/cart/CartSummary'
 
 
 function Home() {
@@ -25,7 +26,7 @@ function Home() {
 
       {/* MAIN CONTENT */}
       <main className='flex flex-1 p-4 pl-32'>
-        <div className='flex-1'>
+        <div className='flex-1 pt-8'>
           <Navbar onSearch={setSearchQuery} />
 
           {/* IF NO PRODUCT IS SELECTED -> SHOWS PRODUCTLIST.JSX
@@ -45,6 +46,10 @@ function Home() {
         
 
         <div className='hidden md:block w-1 bg-gray-300 self-stretch mx-2'></div>
+
+        <div className='hidden md:block w-90'>
+          <CartSummary />
+        </div>
 
       </main>
 
