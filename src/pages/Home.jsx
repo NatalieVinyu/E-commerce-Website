@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import Navbar from '../components/layout/Navbar'
 import Sidebar from '../components/layout/Sidebar'
@@ -15,6 +15,11 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState('')
   const [view, setView] = useState("list")
   const [cartItems, setCartItems] = useState([])
+
+  //SYNC CART TO LOCALSTORAGE
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems))
+  }, [cartItems])
 
   const handleAddToCart = (product) => {
     setCartItems(prev => {
