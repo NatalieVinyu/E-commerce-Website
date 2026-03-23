@@ -60,46 +60,46 @@ export default function Checkout() {
   }
 
   return (
-    <div style={{ ...styles.page, background: "#f6f6f6", minHeight: "100vh", color: "#111" }}>
-      <h1>Checkout</h1>
+    <div className="bg-gray-400">
+      <h1 className="text-4xl font-thin">Checkout</h1>
 
-      <div style={styles.grid}>
-        <form onSubmit={placeOrder} style={styles.card}>
+      <div >
+        <form onSubmit={placeOrder}>
           <h2>Shipping Info</h2>
 
-          <label style={styles.label}>Full Name</label>
-          <input style={styles.input} name="fullName" value={form.fullName} onChange={onChange} />
+          <label>Full Name</label>
+          <input name="fullName" value={form.fullName} onChange={onChange} />
 
-          <label style={styles.label}>Email</label>
-          <input style={styles.input} name="email" type="email" value={form.email} onChange={onChange} />
+          <label>Email</label>
+          <input name="email" type="email" value={form.email} onChange={onChange} />
 
-          <label style={styles.label}>Address</label>
-          <input style={styles.input} name="address" value={form.address} onChange={onChange} />
+          <label>Address</label>
+          <input name="address" value={form.address} onChange={onChange} />
 
-          <label style={styles.label}>City</label>
-          <input style={styles.input} name="city" value={form.city} onChange={onChange} />
+          <label>City</label>
+          <input name="city" value={form.city} onChange={onChange} />
 
-          <label style={styles.label}>ZIP</label>
-          <input style={styles.input} name="zip" value={form.zip} onChange={onChange} />
+          <label>ZIP</label>
+          <input name="zip" value={form.zip} onChange={onChange} />
 
-          <button type="submit" style={styles.button}>
+          <button type="submit">
             Place Order
           </button>
 
-          <div style={{ marginTop: 10 }}>
+          <div>
             <Link to="/">Back to Home</Link>
           </div>
         </form>
 
-        <div style={styles.card}>
+        <div>
           <h2>Order Summary</h2>
 
           {cart.length === 0 ? (
             <p>No items in cart.</p>
           ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div>
               {cart.map((item, idx) => (
-                <div key={item.id ?? idx} style={{ display: "flex", justifyContent: "space-between" }}>
+                <div key={item.id ?? idx}>
                   <span>
                     {(item.name ?? item.title ?? "Item")} x{item.quantity ?? 1}
                   </span>
@@ -111,7 +111,7 @@ export default function Checkout() {
             </div>
           )}
 
-          <hr style={{ margin: "14px 0" }} />
+          <hr />
 
           <Row label="Subtotal" value={`$${subtotal.toFixed(2)}`} />
           <Row label="Shipping" value={`$${shipping.toFixed(2)}`} />
@@ -125,18 +125,9 @@ export default function Checkout() {
 
 function Row({ label, value, bold }) {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", fontWeight: bold ? 800 : 400 }}>
+    <div >
       <span>{label}</span>
       <span>{value}</span>
     </div>
   );
 }
-
-const styles = {
-  page: { maxWidth: 1000, margin: "0 auto", padding: 20 },
-  grid: { display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 16 },
-  card: { border: "1px solid #ddd", borderRadius: 10, padding: 16, background: "white" },
-  label: { display: "block", marginTop: 10 },
-  input: { width: "100%", padding: "10px 12px", marginTop: 6, borderRadius: 8, border: "1px solid #ccc" },
-  button: { width: "100%", marginTop: 14, padding: "12px 14px", borderRadius: 10, border: "none", background: "#111", color: "#fff", fontWeight: 700, cursor: "pointer" },
-};

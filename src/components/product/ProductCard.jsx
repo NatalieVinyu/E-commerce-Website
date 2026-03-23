@@ -1,13 +1,30 @@
 import React from 'react'
+import { BsBagPlusFill } from "react-icons/bs";
 
-function ProductCard({ product, onSelectProduct }) {
+
+function ProductCard({ product, onSelectProduct, onAddToCart }) {
   return (
+    //CLICKING ANYWHERE ON THE CARD OPENS THE PRODUCTDETAIL.JSX
     <div onClick={() => onSelectProduct(product)}>
+
       <div className='cursor-pointer'>
           <img src={product.image} alt={product.name} className='h-50 w-50 object-cover bg-white rounded-xl mb-4 p-4' />
           <h3>{product.name}</h3>
           <h4 className='text-gray-400'>{product.model}</h4>
           <p>$ {product.price}</p>
+      </div>
+
+      {/* ADD TO CART BUTTON */}
+      <div className='flex justify-end'>
+        <button 
+          className='text-white bg-black rounded-lg p-2 cursor-pointer' 
+          //STOPS CLICK FROM TRIGGERING PRODUCT DETAIL
+          onClick={(e) => {
+            e.stopPropagation()
+            onAddToCart?.(product)
+          }}>
+          <BsBagPlusFill />
+        </button>
       </div>
       
       
