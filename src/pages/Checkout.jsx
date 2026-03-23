@@ -128,9 +128,10 @@ export default function Checkout() {
 
               <div className="mt-7 space-y-2 text-lg text-neutral-900">
                 <p>John Maker</p>
-                <p>123 Plae Grond Stret</p>
-                <p>Vermont, California</p>
-                <p>United States of America</p>
+                <p>123 Long Street</p>
+                <p>Cape Town, Western Cape</p>
+                <p>8001</p>
+                <p>South Africa</p>
               </div>
             </section>
 
