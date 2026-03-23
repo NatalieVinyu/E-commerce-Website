@@ -2,7 +2,7 @@ import React from 'react'
 import { BsBagPlusFill } from "react-icons/bs";
 
 
-function ProductCard({ product, onSelectProduct }) {
+function ProductCard({ product, onSelectProduct, onAddToCart }) {
   return (
     //CLICKING ANYWHERE ON THE CARD OPENS THE PRODUCTDETAIL.JSX
     <div onClick={() => onSelectProduct(product)}>
@@ -17,7 +17,7 @@ function ProductCard({ product, onSelectProduct }) {
       {/* ADD TO CART BUTTON */}
       <div className='flex justify-end'>
         <button 
-          className='text-white bg-black rounded-lg p-2' 
+          className='text-white bg-black rounded-lg p-2 cursor-pointer' 
           //STOPS CLICK FROM TRIGGERING PRODUCT DETAIL
           onClick={(e) => {
             e.stopPropagation()

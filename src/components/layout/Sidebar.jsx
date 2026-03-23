@@ -35,14 +35,14 @@ function Sidebar() {
         </NavLink>
 
         <NavLink 
-          to="/products"
+          to="/product"
           className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`}
         >
           <BsShop className='h-5 w-5'/> 
         </NavLink>
 
         <NavLink 
-          to="/cart"
+          to="/CartPage"
           className={({ isActive }) => `px-4 py-2 ${linkStyle({ isActive })}`}
         >
           <RiShoppingBag4Fill className='h-5 w-5'/> 

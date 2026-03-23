@@ -19,6 +19,11 @@ function Home() {
 
   const handleAddToCart = (product) => {
     setCartItems(prev => [...prev, product])
+    setView("cart")
+  }
+
+  const handleClearCart = () => {
+    setCartItems([])
   }
 
   //FILTERING PRODUCTS BY NAME
@@ -35,7 +40,7 @@ function Home() {
       {/* MAIN CONTENT */}
       <main className='flex flex-1 p-4 pl-32'>
         <div className='flex-1 pt-8'>
-          
+
           {view === "list" &&
           <Navbar onSearch={setSearchQuery} />}
 
@@ -63,6 +68,7 @@ function Home() {
           <CartPage 
             cartItems={cartItems}
             onBack={() => setView("list")} 
+            onClearCart={handleClearCart}
           />
         )}
 
@@ -71,11 +77,10 @@ function Home() {
 
         <div className='hidden md:block w-1 bg-gray-300 self-stretch mx-2'></div>
 
-        {view !== "cart" && (
+        
         <div className='hidden md:block w-90'>
           <CartSummary setView={setView} cartItems={cartItems} />
         </div>
-        )}
 
       </main>
 

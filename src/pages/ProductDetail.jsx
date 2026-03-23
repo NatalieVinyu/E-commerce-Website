@@ -43,7 +43,7 @@ function ProductDetail({ product, onBack, onAddToCart }) {
           {/* ADD TO CART BUTTON */}
           <div className='flex justify-end mt-4'>
             <button 
-              className='flex bg-black text-white rounded-lg p-2 items-center gap-2'
+              className='flex bg-black text-white rounded-lg p-2 items-center gap-2 cursor-pointer'
 
               //ADD PRODUCT TO CART
               onClick={() => onAddToCart?.(product)}>
