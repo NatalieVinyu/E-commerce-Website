@@ -3,7 +3,7 @@ import { BsBagPlusFill } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoStar, IoStarHalf } from "react-icons/io5";
 
-function ProductDetail({ product, onBack }) {
+function ProductDetail({ product, onBack, onAddToCart }) {
 
   //FALLBACK MESSAGE WHEN NO PRODUCT IS SELECTED
   if (!product) {
