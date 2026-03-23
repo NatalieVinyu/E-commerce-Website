@@ -3,7 +3,7 @@ import { IoStar, IoStarHalf } from "react-icons/io5";
 import { IoIosArrowBack } from "react-icons/io";
 
 
-function CartPage({ cartItems, onBack, onClearCart }) {
+function CartPage({ cartItems, onBack, onClearCart, onUpdateQuantity }) {
   return (
     <div className='p-4'>
 
@@ -23,8 +23,8 @@ function CartPage({ cartItems, onBack, onClearCart }) {
         <p className='text-center text-gray-500'>Your cart is empty!</p>
       ) : (
       <div className='flex flex-col gap-4'>
-        {cartItems.map((item, idx) => (
-          <div key={idx} className='flex gap-6 bg-white rounded-xl p-6 mr-6'>
+        {cartItems.map((item, index) => (
+          <div key={index} className='flex gap-6 bg-white rounded-xl p-6 mr-6'>
             <img src={item.image || ""} alt={item.name} className='h-40' />
 
             <div>
@@ -44,9 +44,17 @@ function CartPage({ cartItems, onBack, onClearCart }) {
               <div className='flex justify-between'>
                 <div>${item.price}</div>
                 <div className='flex items-center gap-4'>
-                  <button>-</button>
-                  <span>1</span>
-                  <button>+</button>
+                  <button 
+                    onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                    className=''>
+                      -
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button 
+                    onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+                    className=''>
+                      +
+                  </button>
                 </div>
               </div>
           
