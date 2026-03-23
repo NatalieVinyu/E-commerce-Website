@@ -25,34 +25,35 @@ function CartPage({ cartItems, onBack, onClearCart, onUpdateQuantity }) {
       <div className='flex flex-col gap-4'>
         {cartItems.map((item, index) => (
           <div key={index} className='flex gap-6 bg-white rounded-xl p-6 mr-6'>
-            <img src={item.image || ""} alt={item.name} className='h-40' />
+            <img src={item.image || ""} alt={item.name} className='h-40 w-40' />
 
             <div>
               <div className='text-2xl pb-2 font-thin'>{item.name}</div>
-              <div className='text-gray-400'>{item.color || "default color"}</div>
+              <div className='text-gray-400'>{item.model || "default color"}</div>
               <div className='pt-2'>{item.shortDescription}</div>
 
               {/* STAR RATINGS */}
-              <div className='flex gap-2 py-4'>
+              <div className='flex items-center gap-2 py-4'>
                 <IoStar className='text-green-600' />
                 <IoStar className='text-green-600' />
                 <IoStar className='text-green-600' />
                 <IoStar className='text-green-600' />
                 <IoStarHalf className='text-green-600' />
+                <p className='text-green-600 font-thin'>4.5/5</p>
               </div>
 
-              <div className='flex justify-between'>
-                <div>${item.price}</div>
+              <div className='flex justify-between items-center mt-4'>
+                <div className='text-lg'>${item.price}</div>
                 <div className='flex items-center gap-4'>
                   <button 
                     onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                    className=''>
+                    className='w-8 h-8 text-red-500'>
                       -
                   </button>
                   <span>{item.quantity}</span>
                   <button 
                     onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                    className=''>
+                    className='w-8 h-8 text-green-500'>
                       +
                   </button>
                 </div>

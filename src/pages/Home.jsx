@@ -9,7 +9,6 @@ import CartSummary from '../components/cart/CartSummary'
 import CartPage from './CartPage'
 
 
-
 function Home() {
   //TRACKS THE CURRENT SELECTED PRODUCT
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -30,7 +29,6 @@ function Home() {
 
       return [...prev, { ...product,quantity: 1 }]
     })
-    setView("cart")
   }
 
   const handleUpdateQuantity = (productId, newQuantity) => {
@@ -73,7 +71,8 @@ function Home() {
               setSelectedProduct(product)
               setView("detail")
             }}
-            products={filteredProducts} 
+            products={filteredProducts}
+            onAddToCart={handleAddToCart} 
           />
           )} 
 
@@ -85,14 +84,14 @@ function Home() {
           />
            )}
 
-        {view === "cart" && (
+          {view === "cart" && (
           <CartPage 
             cartItems={cartItems}
             onBack={() => setView("list")} 
             onClearCart={handleClearCart}
             onUpdateQuantity={handleUpdateQuantity}
-          />
-        )}
+            />
+         )}
 
         </div>
         
@@ -100,8 +99,8 @@ function Home() {
         <div className='hidden md:block w-1 bg-gray-300 self-stretch mx-2'></div>
 
         
-        <div className='hidden md:block w-90'>
-          <CartSummary setView={setView} cartItems={cartItems} />
+        <div className='hidden md:block w-80'>
+          <CartSummary setView={setView} cartItems={cartItems} view={view} />
         </div>
 
       </main>
