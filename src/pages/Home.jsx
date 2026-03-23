@@ -66,7 +66,10 @@ function Home() {
         <div className='flex-1 pt-8'>
 
           {view === "list" &&
-          <Navbar onSearch={setSearchQuery} />}
+          <Navbar 
+            onSearch={setSearchQuery}
+            cartCount={cartItems.length}
+            onCartClick={() => setView("cart")} />}
 
           {/* IF NO PRODUCT IS SELECTED -> SHOWS PRODUCTLIST.JSX
               IF A PRODUCT IS SELECTED -> SHOWS PRODUCTDETAILS.JSX */}

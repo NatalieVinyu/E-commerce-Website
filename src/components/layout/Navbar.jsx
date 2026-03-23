@@ -2,7 +2,7 @@ import React from 'react'
 import { IoCart } from "react-icons/io5";
 
 
-function Navbar({ onSearch, cartCount }) {
+function Navbar({ onSearch, cartCount, onCartClick }) {
   const [query, setQuery] = React.useState('')
 
   const handleChange = (e) => {
@@ -21,6 +21,11 @@ function Navbar({ onSearch, cartCount }) {
 
       <div className='absolute right-2 top-1/2 transform -translate-y-1/2 sm:hidden'>
         <IoCart className='w-6 h-6 cursor-pointer' />
+        {cartCount > 0 && (
+          <span className='absolute -top-2 -right-2 bg-black text-white text-xs w-5 h-5 rounded-full flex items-center justify-center'>
+            {cartCount}
+          </span>
+        )}
       </div>
     </div>
   )
